@@ -1,0 +1,19 @@
+{
+  "name": "synergies-immo-services",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Supabase backend for Synergies Immo — declarative schemas, migrations, Edge Functions",
+  "scripts": {
+    "start": "supabase start",
+    "stop": "supabase stop",
+    "status": "supabase status",
+    "diff": "supabase db diff -f",
+    "migrate:up": "supabase migration up",
+    "migrate:new": "supabase migration new",
+    "db:reset": "supabase db reset",
+    "db:push": "supabase db push",
+    "gen:types": "supabase gen types typescript --local > ../synergies-immo-backoffice/src/lib/database.types.ts",
+    "functions:serve": "supabase functions serve",
+    "functions:deploy": "supabase functions deploy"
+  }
+}
