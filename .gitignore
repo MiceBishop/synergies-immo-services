@@ -5,3 +5,6 @@ node_modules/
 *.log
 .vscode/
 .idea/
+
+# Supabase CLI link credentials
+.supabase/
