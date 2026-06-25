@@ -82,6 +82,6 @@ supabase db push                                     # apply local migrations to
 
 ## See also
 
-- `../synergies-immo/IMPLEMENTATION_PLAN.md` — full plan
-- `../synergies-immo/RULES.md` — project rules
-- `../synergies-immo/MEMORY.md` — project memory
+- `../IMPLEMENTATION_PLAN.md` — full plan
+- `../RULES.md` — project rules
+- `../MEMORY.md` — project memory
