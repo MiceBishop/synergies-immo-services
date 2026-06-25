@@ -1,0 +1,9 @@
+create index idx_units_building on units(building_id);
+create index idx_leases_unit on leases(unit_id);
+create index idx_leases_tenant on leases(tenant_id);
+create index idx_leases_status on leases(status);
+create index idx_rent_dues_lease on rent_dues(lease_id);
+create index idx_rent_dues_month on rent_dues(due_month);
+create index idx_rent_dues_status on rent_dues(status);
+create index idx_payments_rent_due on payments(rent_due_id);
+create index idx_expenses_building on expenses(building_id);

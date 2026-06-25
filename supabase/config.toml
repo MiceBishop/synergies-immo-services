@@ -24,6 +24,26 @@ shadow_port = 54320
 # server_version;` on the remote database to check.
 major_version = 15
 
+[db.migrations]
+# Explicit ordering for declarative schemas. `supabase db diff` reads these files in order
+# to compute the desired state.
+schema_paths = [
+  "./schemas/00_enums.sql",
+  "./schemas/01_owners.sql",
+  "./schemas/02_buildings.sql",
+  "./schemas/03_units.sql",
+  "./schemas/04_tenants.sql",
+  "./schemas/05_leases.sql",
+  "./schemas/06_rent_dues.sql",
+  "./schemas/07_payments.sql",
+  "./schemas/08_expenses.sql",
+  "./schemas/09_settings.sql",
+  "./schemas/10_notifications.sql",
+  "./schemas/11_documents.sql",
+  "./schemas/12_indexes.sql",
+  "./schemas/13_views.sql",
+]
+
 [db.pooler]
 enabled = false
 # Port to use for the local connection pooler.

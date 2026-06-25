@@ -68,6 +68,18 @@ supabase/
 └── seed.sql              ← local seed (not used in prod)
 ```
 
+## Linking to the remote Supabase project
+
+Project ref: `mvqfqifshnlfzneyftnz` (<https://supabase.com/dashboard/project/mvqfqifshnlfzneyftnz>).
+
+```bash
+supabase login                                       # one-time
+supabase link --project-ref mvqfqifshnlfzneyftnz     # one-time per checkout
+supabase db push                                     # apply local migrations to remote
+```
+
+`supabase link` stores credentials in `.supabase/` (gitignored). Never commit them.
+
 ## See also
 
 - `../synergies-immo/IMPLEMENTATION_PLAN.md` — full plan
