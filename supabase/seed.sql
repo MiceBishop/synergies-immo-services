@@ -83,7 +83,7 @@ insert into tenants (id, last_name, first_name, email, phone, national_id, tax_i
     'SN-DKR-2018-B-12345',
     '004112233C4',
     'company',
-    'Cabinet de conseil. Bail commercial 18% TVA.'
+    'Cabinet de conseil. Contrat commercial 18% TVA.'
   );
 
 ----------------------------------------------------------------------
@@ -113,7 +113,7 @@ insert into leases (id, unit_id, tenant_id, start_date, end_date, rent_excl_tax,
     '33333333-3333-3333-3333-000000000006',
     '44444444-4444-4444-4444-000000000003',
     '2024-06-01', '2026-05-31',
-    600000, 18, 1800000, true, 'active', 'Bail commercial 2 ans, indexation annuelle prévue.'
+    600000, 18, 1800000, true, 'active', 'Contrat commercial 2 ans, indexation annuelle prévue.'
   ),
   -- Société Atlantique → RDC-COM (commercial, 18% VAT)
   (
