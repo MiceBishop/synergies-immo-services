@@ -9,5 +9,7 @@ create table expenses (
   billable boolean default false,
   notes text,
   created_at timestamptz default now(),
+  -- When set, this (billable) charge is added to the tenant's monthly bill.
+  rent_due_id uuid references rent_dues(id) on delete set null,
   constraint chk_expense_target check (building_id is not null or unit_id is not null)
 );

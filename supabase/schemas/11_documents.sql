@@ -1,6 +1,7 @@
 create table documents (
   id uuid primary key default gen_random_uuid(),
   type document_type not null,
+  label text,
   file_name text not null,
   storage_path text not null,
   file_size_bytes integer,
