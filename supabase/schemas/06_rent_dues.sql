@@ -4,6 +4,7 @@ create table rent_dues (
   due_month date not null,
   amount_excl_tax numeric(12,2) not null,
   vat_amount numeric(12,2) not null,
+  waste_tax_amount numeric(12,2) not null default 0,
   amount_incl_tax numeric(12,2) not null,
   status payment_status default 'unpaid',
   created_at timestamptz default now()

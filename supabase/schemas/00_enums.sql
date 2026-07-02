@@ -7,3 +7,4 @@ create type expense_type as enum ('water', 'electricity', 'syndicate', 'maintena
 create type document_type as enum ('national_id', 'business_registration', 'tax_id', 'signed_lease', 'receipt', 'invoice', 'other');
 create type notification_channel as enum ('email', 'sms', 'whatsapp');
 create type notification_status as enum ('pending', 'sent', 'failed');
+create type payment_frequency as enum ('monthly', 'quarterly');

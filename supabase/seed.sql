@@ -129,13 +129,14 @@ insert into leases (id, unit_id, tenant_id, start_date, end_date, rent_excl_tax,
 ----------------------------------------------------------------------
 -- Generate the last 3 months (current, current-1, current-2) for every active lease.
 -- Statuses laid out so dashboards/lists exercise paid + partial + unpaid in parallel.
-insert into rent_dues (id, lease_id, due_month, amount_excl_tax, vat_amount, amount_incl_tax, status)
+insert into rent_dues (id, lease_id, due_month, amount_excl_tax, vat_amount, waste_tax_amount, amount_incl_tax, status)
 select
   ('66666666-6666-6666-6666-' || lpad(row_number() over (order by l.id, m.offset_months)::text, 12, '0'))::uuid,
   l.id,
   (date_trunc('month', current_date)::date - (m.offset_months || ' months')::interval)::date,
   l.rent_excl_tax,
   l.vat_amount,
+  l.waste_tax_amount,
   l.rent_incl_tax,
   case
     when m.offset_months >= 2 then 'paid'::payment_status
